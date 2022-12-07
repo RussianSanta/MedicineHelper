@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedicineHelper">
         <activity
+            android:name=".InterviewResult"
+            android:exported="false" />
+        <activity
             android:name=".HypertensionInterview"
             android:exported="false" />
         <activity
