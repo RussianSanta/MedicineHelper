@@ -8,52 +8,48 @@
     tools:context=".HypertensionInterview">
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/hyp_name"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="660dp"
         android:text="Гипертония"
         android:textAlignment="center"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/hyp_textView10"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="500dp"
         android:text="Чтобы эффективность теста была выше, необходимо отвечать честно. Информацию нужно вводить относительно последней недели. Вся информация оцениватеся по 10-бальной шкале"
         android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/hyp_name" />
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/hyp_linearLayout3"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="40dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10">
+        app:layout_constraintTop_toBottomOf="@+id/hyp_textView10">
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/hyp_textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -62,7 +58,7 @@
             android:textSize="20sp" />
 
         <SeekBar
-            android:id="@+id/seekBar2"
+            android:id="@+id/hyp_seekBar2"
             style="@android:style/Widget.Material.SeekBar.Discrete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,7 +68,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:id="@+id/hyp_linearLayout4"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_marginStart="40dp"
@@ -82,10 +78,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/hyp_linearLayout3">
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/hyp_textView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Как часто вы курите в течение недели"
@@ -93,7 +89,7 @@
             android:textSize="20sp" />
 
         <SeekBar
-            android:id="@+id/seekBar3"
+            android:id="@+id/hyp_seekBar3"
             style="@android:style/Widget.Material.SeekBar.Discrete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -102,7 +98,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout5"
+        android:id="@+id/hyp_linearLayout5"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_marginStart="40dp"
@@ -111,10 +107,10 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+        app:layout_constraintTop_toBottomOf="@+id/hyp_linearLayout4">
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/hyp_textView16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Укажите интенсивность головной боли"
@@ -122,7 +118,7 @@
             android:textSize="20sp" />
 
         <SeekBar
-            android:id="@+id/seekBar4"
+            android:id="@+id/hyp_seekBar4"
             style="@android:style/Widget.Material.SeekBar.Discrete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -131,7 +127,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout6"
+        android:id="@+id/hyp_linearLayout6"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_marginStart="40dp"
@@ -140,10 +136,10 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+        app:layout_constraintTop_toBottomOf="@+id/hyp_linearLayout5">
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/hyp_textView17"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Как часто вы сталкиваетесь с тошнотой"
@@ -151,7 +147,7 @@
             android:textSize="20sp" />
 
         <SeekBar
-            android:id="@+id/seekBar5"
+            android:id="@+id/hyp_seekBar5"
             style="@android:style/Widget.Material.SeekBar.Discrete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -160,17 +156,14 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button15"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginBottom="20dp"
+        android:id="@+id/hyp_button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="nextButtonClick"
         android:text="К результатам"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout6" />
+        app:layout_constraintTop_toBottomOf="@id/hyp_linearLayout6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

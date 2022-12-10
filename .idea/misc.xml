@@ -4,13 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/MedicineHelper/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2265" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/MedicineHelper/app/src/main/res/layout/activity_arthrosis_interview.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MedicineHelper/app/src/main/res/layout/activity_arthrosis_interview.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MedicineHelper/app/src/main/res/layout/activity_consultation_selection.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MedicineHelper/app/src/main/res/layout/activity_covid_interview.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MedicineHelper/app/src/main/res/layout/activity_first_question.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MedicineHelper/app/src/main/res/layout/activity_hypertension_interview.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MedicineHelper/app/src/main/res/layout/activity_interview_result.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MedicineHelper/app/src/main/res/layout/activity_interview_selection.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/MedicineHelper/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MedicineHelper/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MedicineHelper/app/src/main/res/layout/activity_map.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MedicineHelper/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2265" />
       </map>
     </option>
@@ -20,5 +22,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22826086956521738" />
+      </ProjectState>
+    </option>
   </component>
 </project>
