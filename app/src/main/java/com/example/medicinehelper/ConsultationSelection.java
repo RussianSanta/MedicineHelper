@@ -1,10 +1,10 @@
 package com.example.medicinehelper;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ConsultationSelection extends AppCompatActivity {
 
@@ -32,7 +32,7 @@ public class ConsultationSelection extends AppCompatActivity {
 
     public void toInterviewsButtonClick(View view) {
         Intent intent = new Intent();
-        intent.setClass(this, InterviewSelection.class);
+        intent.setClass(this, Questions.class);
         startActivity(intent);
     }
 

@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/result_name" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/result_chance"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -60,7 +60,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/result_chance" />
 
     <TextView
         android:id="@+id/textView7"
