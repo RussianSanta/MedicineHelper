@@ -7,13 +7,14 @@ public class Variable {
     private String name;
     private int[] dispersion;
     private double belongValue;
-    private double discreteValue = 3;
+    private double discreteValue;
     private String question;
     private boolean asked = false;
 
     public Variable(String name, int[] dispersion) {
         this.name = name;
         this.dispersion = dispersion;
+        this.discreteValue = (double) (dispersion[1] - dispersion[0]) / 3 + dispersion[0];
         question = "Укажите интенсивность симптома " + name;
     }
 

@@ -9,9 +9,11 @@ public class Disease {
     private ArrayList<Variable> variables = new ArrayList<>();
     private double chance;
     private boolean asked = false;
+    private String doctorName;
 
-    public Disease(String name, Variable... variables) {
+    public Disease(String name, String doctorName, Variable... variables) {
         this.name = name;
+        this.doctorName = doctorName;
         this.variables.addAll(Arrays.asList(variables));
     }
 
@@ -57,5 +59,13 @@ public class Disease {
 
     public void setAsked(boolean asked) {
         this.asked = asked;
+    }
+
+    public String getDoctorName() {
+        return doctorName;
+    }
+
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
     }
 }

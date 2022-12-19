@@ -79,9 +79,9 @@ public class DataProvider {
         arthrosisChance.addTerm("50/50", new int[]{4, 5, 6});
         arthrosisChance.addTerm("Вероятно да", new int[]{6, 9, 10});
 
-        Disease covid = new Disease("Covd-19", fever, bodyPain, headache, sweating, cough, covidChance);
-        Disease hypertension = new Disease("Гипертония", wheeze, smoking, headache, nausea, hypertensionChance);
-        Disease arthrosis = new Disease("Артроз", physicalWork, smoking, mobility, walkingPain, arthrosisChance);
+        Disease covid = new Disease("Covd-19", "Терапевт", fever, bodyPain, headache, sweating, cough, covidChance);
+        Disease hypertension = new Disease("Гипертония","Кардиолог",  wheeze, smoking, headache, nausea, hypertensionChance);
+        Disease arthrosis = new Disease("Артроз","Ортопед",  physicalWork, smoking, mobility, walkingPain, arthrosisChance);
 
 //      На вход подаются номера термов в соотвествии с порядком их добавления.
 //      Последовательность соответствует последовательности добавления переменных для болезни

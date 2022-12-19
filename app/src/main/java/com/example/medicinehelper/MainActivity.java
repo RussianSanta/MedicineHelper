@@ -24,6 +24,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void SettingsButtonClick(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, Settings.class);
+        startActivity(intent);
+    }
+
     public void emergencyButtonClick(View view) {
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

@@ -98,13 +98,9 @@ public class Questions extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setClass(this, InterviewResult.class);
 
-        if (maxChance > 3) {
-            intent.putExtra("name", maxChanceDisease.getName());
-            intent.putExtra("chance", maxChance * 10);
-        } else {
-            intent.putExtra("name", "Скорее всего вы здоровы");
-            intent.putExtra("chance", 10 - maxChance * 10);
-        }
+        intent.putExtra("name", maxChanceDisease.getName());
+        intent.putExtra("doctorName", maxChanceDisease.getDoctorName());
+        intent.putExtra("chance", maxChance * 10);
         startActivity(intent);
     }
 
