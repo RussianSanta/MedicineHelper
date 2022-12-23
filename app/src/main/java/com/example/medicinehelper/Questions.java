@@ -98,9 +98,11 @@ public class Questions extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setClass(this, InterviewResult.class);
 
+        String chance = String.format("%.2f", maxChance*10);
+
         intent.putExtra("name", maxChanceDisease.getName());
         intent.putExtra("doctorName", maxChanceDisease.getDoctorName());
-        intent.putExtra("chance", maxChance * 10);
+        intent.putExtra("chance", chance);
         startActivity(intent);
     }
 

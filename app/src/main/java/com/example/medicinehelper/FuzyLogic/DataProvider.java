@@ -59,7 +59,7 @@ public class DataProvider {
         nausea.addTerm("Да", new int[]{3, 7, 10});
 
         physicalWork.addTerm("Нет", new int[]{0, 1, 6});
-        physicalWork.addTerm("Да", new int[]{6, 9, 10});
+        physicalWork.addTerm("Да", new int[]{5, 9, 10});
 
         mobility.addTerm("Нет", new int[]{0, 1, 6});
         mobility.addTerm("Да", new int[]{6, 9, 10});

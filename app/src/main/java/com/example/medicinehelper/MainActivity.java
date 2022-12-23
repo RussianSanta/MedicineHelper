@@ -1,6 +1,7 @@
 package com.example.medicinehelper;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
@@ -9,6 +10,18 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+
+import com.example.medicinehelper.JsonObjects.Location;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
+import java.io.BufferedReader;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,12 +37,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void SettingsButtonClick(View view) {
-        Intent intent = new Intent();
-        intent.setClass(this, Settings.class);
-        startActivity(intent);
-    }
-
     public void emergencyButtonClick(View view) {
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -40,8 +47,37 @@ public class MainActivity extends AppCompatActivity {
 
         double latitude = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER).getLatitude();
         double longitude = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER).getLongitude();
+        Location location = new Location(latitude, longitude);
 
-        System.out.println(latitude);
-        System.out.println(longitude);
+//      Пример записи в файл
+        try {
+            Gson gson = new Gson();
+            String jsonText = gson.toJson(location);
+            FileOutputStream fos = openFileOutput("location.json", Context.MODE_PRIVATE);
+            fos.write(jsonText.getBytes(StandardCharsets.UTF_8));
+            fos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+//      Вывод содержимого файла
+        try {
+            InputStream inputStream = openFileInput("location.json");
+
+            if (inputStream != null) {
+                InputStreamReader isr = new InputStreamReader(inputStream);
+                BufferedReader reader = new BufferedReader(isr);
+                String line;
+                StringBuilder builder = new StringBuilder();
+
+                while ((line = reader.readLine()) != null) {
+                    builder.append(line + "\n");
+                }
+
+                System.out.println(builder);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

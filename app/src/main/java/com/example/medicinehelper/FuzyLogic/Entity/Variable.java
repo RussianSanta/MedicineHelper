@@ -14,7 +14,7 @@ public class Variable {
     public Variable(String name, int[] dispersion) {
         this.name = name;
         this.dispersion = dispersion;
-        this.discreteValue = (double) (dispersion[1] - dispersion[0]) / 3 + dispersion[0];
+        this.discreteValue = (double) (dispersion[1] - dispersion[0]) / 5 + dispersion[0];
         question = "Укажите интенсивность симптома " + name;
     }
 
