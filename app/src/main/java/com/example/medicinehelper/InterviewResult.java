@@ -39,22 +39,23 @@ public class InterviewResult extends AppCompatActivity {
         Bundle arguments = getIntent().getExtras();
         if (arguments != null) {
             String diseaseName = arguments.get("name").toString();
-            String chance = arguments.get("chance").toString();
+            double chance = (double) arguments.get("chance");
+            String chanceText = String.format("%.2f", chance*10);
 
-            if (Double.parseDouble(chance) < 30) {
+            if (chance < 3) {
                 name.setText("Проблем не найдено");
                 resultLabel.setVisibility(View.INVISIBLE);
                 resultChance.setVisibility(View.INVISIBLE);
                 recommendationText.setText("Скорее всего вы здоровы. Советуем посетить терапевта в целях профилкатики");
             } else {
                 name.setText(diseaseName);
-                String resultString = chance + "%";
+                String resultString = chanceText + "%";
                 String doctorName = arguments.get("doctorName").toString();
                 resultChance.setText(resultString);
                 recommendationText.setText("Рекомендуем посетить следующего врача - " + doctorName);
             }
 
-            Result result = new Result(diseaseName, chance);
+            Result result = new Result(diseaseName, chanceText);
             //      Пример записи в файл
             try {
                 Gson gson = new Gson();

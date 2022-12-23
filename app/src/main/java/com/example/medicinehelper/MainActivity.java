@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -79,5 +80,9 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        Toast toast = Toast.makeText(getApplicationContext(),
+                latitude + ";  " + longitude, Toast.LENGTH_SHORT);
+        toast.show();
     }
 }

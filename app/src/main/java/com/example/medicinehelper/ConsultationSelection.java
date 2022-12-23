@@ -3,6 +3,7 @@ package com.example.medicinehelper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,19 +16,27 @@ public class ConsultationSelection extends AppCompatActivity {
     }
 
     public void therapistButtonClick(View view) {
-        System.out.println("Выбран терапевт");
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "Выбран терапевт", Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public void cardiologistButtonClick(View view) {
-        System.out.println("Выбран кардиолог");
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "Выбран кардиолог", Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public void orthopedistButtonClick(View view) {
-        System.out.println("Выбран ортопед");
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "Выбран ортопед", Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public void dutyButtonClick(View view) {
-        System.out.println("Выбран дежурный врач");
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "Выбран дежурный врач", Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public void toInterviewsButtonClick(View view) {

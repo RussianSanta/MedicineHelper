@@ -23,6 +23,8 @@ public class Questions extends AppCompatActivity {
     private Variable activeVariable;
 
     private TextView questionView;
+    private TextView textMin;
+    private TextView textMax;
     private SeekBar seekBar;
 
     @Override
@@ -31,6 +33,8 @@ public class Questions extends AppCompatActivity {
         setContentView(R.layout.activity_questions);
 
         questionView = findViewById(R.id.questionView);
+        textMin = findViewById(R.id.textMin);
+        textMax = findViewById(R.id.textMax);
         seekBar = findViewById(R.id.seekBar);
 
         diseases = DataProvider.getDiseases();
@@ -46,6 +50,8 @@ public class Questions extends AppCompatActivity {
         seekBar.setMin(activeVariable.getDispersion()[0]);
         seekBar.setMax(activeVariable.getDispersion()[1]);
         seekBar.setProgress((int) activeVariable.getDiscreteValue());
+        textMin.setText(String.valueOf(activeVariable.getDispersion()[0]));
+        textMax.setText(String.valueOf(activeVariable.getDispersion()[1]));
     }
 
     public void nextButtonClick(View view) {
@@ -98,11 +104,9 @@ public class Questions extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setClass(this, InterviewResult.class);
 
-        String chance = String.format("%.2f", maxChance*10);
-
         intent.putExtra("name", maxChanceDisease.getName());
         intent.putExtra("doctorName", maxChanceDisease.getDoctorName());
-        intent.putExtra("chance", chance);
+        intent.putExtra("chance", maxChance);
         startActivity(intent);
     }
 
